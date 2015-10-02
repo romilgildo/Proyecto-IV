@@ -5,7 +5,7 @@ Plataforma académica de compartición de archivos de la universidad, y que perm
 ###Seguridad###
 
 Permitir tener un sistema seguro en el que se separen datos sensibles y credenciales de los usuarios, y por otra parte archivos de los mismos. Por otra parte tendremos una web con foros que si es atacada no compremete la privacidad de los usuarios ni sus archivos.
-
+__________________
 
 Tenemos que tener un usuario de pruebas.
 
@@ -23,7 +23,6 @@ Montar base de datos en el servidor,enlazar asignaturas, grupos, usuarios, archi
 Permitir registro y inicio de sesion de usuarios.
 
 3. Parte usuarios, permitir foros, ordenar asignaturas,ordenar por usuarios. Interfaz.
-
 
 #Maquinas virtuales#
 1. Cloud en Azure. Gestión de archivos.
