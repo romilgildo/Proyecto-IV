@@ -28,6 +28,5 @@ Permitir registro y inicio de sesion de usuarios.
 1. Cloud en Azure. Gestión de archivos.
 2. Base de datos en Azure.
 3. Servidor que aloje la web y sus recursos asociados.
-4. 
 
 
