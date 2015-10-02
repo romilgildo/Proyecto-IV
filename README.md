@@ -14,4 +14,6 @@ Plataforma académica de compartición de archivos de la universidad, y que perm
 
 ###Seguridad###
 
-Permitir tener un sistema seguro en el que se separen datos sensibles y credenciales de los usuarios, y por otra parte archivos de los mismos. Por otra parte tendremos una web con foros que si es atacada no compremete la privacidad de los usuarios ni sus archivos.
+Permitir tener un sistema seguro en el que se separen datos sensibles y credenciales de los usuarios, y por otra parte archivos de los mismos. Por otra parte tendremos una web con foros que si es atacada, no compremete la privacidad de los usuarios ni sus archivos.
+
+
