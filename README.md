@@ -10,7 +10,7 @@ PLATAFORMA ACADÉMICA UNIVERSITARIA Y COMPARTICIÓN DE CONOCIMIENTOS#
 
 ##Introducción##
 
-Plataforma académica de compartición de archivos de la universidad, y que permita la colaboración en grupo entre los mismos usuarios.
+Plataforma académica para compartir archivos de la universidad, y que permita la colaboración en grupo entre los mismos usuarios.
 
 ###Seguridad###
 
