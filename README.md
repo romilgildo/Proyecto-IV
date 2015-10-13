@@ -31,3 +31,5 @@ Rafael Lachica Garrido
 Rubén Martín Hidalgo
 
 Miguel Fernández Fernández
+
+[Apuntados en el proyecto de software libre de la oficina OSL](http://osl.ugr.es/bases-de-los-premios-a-proyectos-libres-de-la-ugr/)
