@@ -61,7 +61,7 @@ docker_Azure:
 	./variables_entorno.sh
 	cd despliegueDocker && sudo vagrant up --provider=azure
 	cd ..
-	fab -p ENV['PASS_VM'] -H pluco@pruebas-pluco.cloudapp.net montar_docker
+	fab -H pluco@pruebas-pluco.cloudapp.net montar_docker
 
 azure:
 	sudo apt-get install -y fabric
@@ -81,5 +81,5 @@ push:
 	git status
 	sudo despliegueAzure/escribirCommit.sh
 	git push
-	fab -p ENV['PASS_VM'] -H pluco@pluco-app.cloudapp.net actualizar
+	fab -H pluco@pluco-iv.cloudapp.net actualizar
 	python manage.py syncdb
