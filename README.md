@@ -5,7 +5,7 @@
 * Rubén Martín Hidalgo
 * Rafael Lachica Garrido
 
-[Web del proyecto](http://rafaellg8.github.io/Proyecto-Pluco/)
+[Web del proyecto](http://rafaellg8.github.io/Proyecto-IV/)
 
 [Apuntados en el proyecto de software libre de la oficina OSL](http://osl.ugr.es/bases-de-los-premios-a-proyectos-libres-de-la-ugr/)
 
@@ -43,11 +43,11 @@ Proyecto bajo [licencia GNU V.3](https://github.com/romilgildo/Proyecto-PLUCO/bl
 
 ## Herramienta de construcción con Make
 
-Para la construcción automática de la app, he usado [Make](https://www.gnu.org/software/make/). Para su funcionamiento, he creado un [Makefile](https://github.com/romilgildo/IV-PLUCO-RMH/blob/master/Makefile) con las distintas opciones.
+Para la construcción automática de la app, he usado [Make](https://www.gnu.org/software/make/). Para su funcionamiento, he creado un [Makefile](https://github.com/romilgildo/Proyecto-PLUCO/blob/master/Makefile) con las distintas opciones.
 
 Para ejecutar la herramienta de construcción, simplemente debemos escribir en la terminal el comando **make** seguido de la opción que queramos ejecutar (clean, test, run...).
 
-[Más información](https://github.com/romilgildo/IV-PLUCO-RMH/blob/master/documentacion/construccionApp.md)
+[Más información](https://github.com/romilgildo/Proyecto-PLUCO/blob/master/documentacion/construccionApp.md)
 
 ## Integración contínua
 
@@ -57,7 +57,7 @@ La integración contínua consiste en hacer integraciones automáticas de un pro
 
 Para la realización de tests que permitan comprobar que el código creado funciona correctamente, he usado para mi código escrito en Python, el sistema de pruebas [Nose](https://nose.readthedocs.org/en/latest/), que está basado en funciones de [Unittest](https://docs.python.org/2/library/unittest.html). Existen otras alternativas para Python como pueden ser [Tox](https://testrun.org/tox/latest/) y [Pytest](http://pytest.org/latest/), pero he escogido Nose por ser el más conocido.
 
-Aquí está el archivo [tests.py](https://github.com/romilgildo/IV-PLUCO-RMH/blob/master/plucoapp/tests.py) actualizado con los tests correspondientes para manejar los modelos de la app.
+Aquí está el archivo [tests.py](https://github.com/romilgildo/Proyecto-PLUCO/blob/master/plucoapp/tests.py) actualizado con los tests correspondientes para manejar los modelos de la app.
 
 Para ejecutar los tests localmente, hacer `make test`.
 
@@ -71,7 +71,7 @@ El siguiente paso es elegir un sistema de integración contínua de modo que cad
 
 En mi caso, estoy haciendo la integración contínua con [Shippable](https://www.shippable.com/), [Travis](https://travis-ci.org/) y [Snap-CI](https://snap-ci.com/)
 
-[Más información](https://github.com/romilgildo/IV-PLUCO-RMH/blob/master/documentacion/integracionContinua.md)
+[Más información](https://github.com/romilgildo/Proyecto-PLUCO/blob/master/documentacion/integracionContinua.md)
 
 ## Descarga de la app
 
@@ -82,7 +82,7 @@ Para ello ejecutamos los siguientes comandos:
 ```
 $ sudo apt-get install git
 $ sudo apt-get install make
-$ git clone https://github.com/romilgildo/IV-PLUCO-RMH.git
+$ git clone https://github.com/romilgildo/Proyecto-PLUCO.git
 $ cd IV-PLUCO-RMH/
 ```
 
@@ -99,7 +99,7 @@ Si todo ha ido bien, ya podremos acceder a nuestra app introduciendo `localhost:
 
 ## Despliegue de la app
 
-Para desplegar la aplicación en Azure, lo primero que debemos hacer es [crear el certificado para Azure](https://github.com/romilgildo/IV-PLUCO-RMH/blob/master/documentacion/crearCertificados.md).
+Para desplegar la aplicación en Azure, lo primero que debemos hacer es [crear el certificado para Azure](https://github.com/romilgildo/Proyecto-PLUCO/blob/master/documentacion/crearCertificados.md).
 
 Una vez hecho el paso anterior, ya podemos poner en marcha toda la app en la web de manera totalemente automatizada con solo ejecutar lo siguiente:
 
@@ -121,7 +121,7 @@ Para poder tener disponible desde cualquier lugar nuestra base de datos, he deci
 
 Para ello, bastará con ejecutar `make mysql` y automáticamente se crearán las bases de datos en una máquina independiente en Azure.
 
-[Más información](https://github.com/romilgildo/IV-PLUCO-RMH/blob/master/documentacion/MySQL.md)
+[Más información](https://github.com/romilgildo/Proyecto-PLUCO/blob/master/documentacion/MySQL.md)
 
 ### Entorno de pruebas con Docker
 
@@ -135,7 +135,7 @@ Para crear dicho entorno, se debe ejecutar el siguiente comando en local:
 
  `make docker`
 
-[Más información](https://github.com/romilgildo/IV-PLUCO-RMH/blob/master/documentacion/entornoDocker.md)
+[Más información](https://github.com/romilgildo/Proyecto-PLUCO/blob/master/documentacion/entornoDocker.md)
 
 ### Despliegue en un PaaS: Heroku
 
@@ -143,7 +143,7 @@ Nos decantamos por [Heroku](https://www.heroku.com/), debido a que funciona real
 
 Esta es la aplicación ya desplegada en Heroku: [https://pluco-db.herokuapp.com/](https://pluco-db.herokuapp.com/)
 
-[Más información](https://github.com/romilgildo/IV-PLUCO-RMH/blob/master/documentacion/despliegueHeroku.md)
+[Más información](https://github.com/romilgildo/Proyecto-PLUCO/blob/master/documentacion/despliegueHeroku.md)
 
 ### Despliegue en un IaaS: Azure
 
@@ -153,10 +153,10 @@ Con el comando `make push` podemos actualizar al mismo tiempo los archivos en el
 
 Si el crédito de Azure no se ha agotado, tendré la aplicación web totalmente actualizada funcionando en esta dirección: [http://pluco-iv.cloudapp.net/](http://pluco-iv.cloudapp.net/)
 
-[Más información](https://github.com/romilgildo/IV-PLUCO-RMH/blob/master/documentacion/despliegueAzure.md)
+[Más información](https://github.com/romilgildo/Proyecto-PLUCO/blob/master/documentacion/despliegueAzure.md)
 
 ## Administración remota con Fabric
 
 Si queremos realizar una administración remota del despliegue de manera automática, podemos usar [Fabric](http://www.fabfile.org/).
 
-[Más información](https://github.com/romilgildo/IV-PLUCO-RMH/blob/master/documentacion/Fabric.md)
+[Más información](https://github.com/romilgildo/Proyecto-PLUCO/blob/master/documentacion/Fabric.md)
