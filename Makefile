@@ -21,11 +21,12 @@ mysql:
 	wget https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
 	sudo dpkg -i vagrant_1.8.1_x86_64.deb
 	rm vagrant_1.8.1_x86_64.deb
-	vagrant plugin install vagrant-azure
+	vagrant plugin install vagrant-azure vagrant-env
 	sudo apt-get install -y python-pip
 	sudo pip install --upgrade pip
 	sudo pip install paramiko PyYAML jinja2 httplib2 ansible
 	sudo vagrant box add azure https://github.com/msopentech/vagrant-azure/raw/master/dummy.box --force
+	./variables_entorno.sh
 	cd despliegueMySQL && sudo vagrant up --provider=azure
 
 test:
@@ -55,8 +56,9 @@ docker_Azure:
 	wget https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
 	sudo dpkg -i vagrant_1.8.1_x86_64.deb
 	rm vagrant_1.8.1_x86_64.deb
-	vagrant plugin install vagrant-azure
+	vagrant plugin install vagrant-azure vagrant-env
 	sudo vagrant box add azure https://github.com/msopentech/vagrant-azure/raw/master/dummy.box --force
+	./variables_entorno.sh
 	cd despliegueDocker && sudo vagrant up --provider=azure
 	cd ..
 	fab -p ENV['PASS_VM'] -H pluco@pruebas-pluco.cloudapp.net montar_docker
@@ -66,11 +68,12 @@ azure:
 	wget https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
 	sudo dpkg -i vagrant_1.8.1_x86_64.deb
 	rm vagrant_1.8.1_x86_64.deb
-	vagrant plugin install vagrant-azure
+	vagrant plugin install vagrant-azure vagrant-env
 	sudo apt-get install -y python-pip
 	sudo pip install --upgrade pip
 	sudo pip install paramiko PyYAML jinja2 httplib2 ansible
 	sudo vagrant box add azure https://github.com/msopentech/vagrant-azure/raw/master/dummy.box --force
+	./variables_entorno.sh
 	cd despliegueAzure && sudo vagrant up --provider=azure
 
 push:
@@ -78,5 +81,5 @@ push:
 	git status
 	sudo despliegueAzure/escribirCommit.sh
 	git push
-	fab -p ENV['PASS_VM'] -H pluco@pluco-iv.cloudapp.net actualizar
+	fab -p ENV['PASS_VM'] -H pluco@pluco-app.cloudapp.net actualizar
 	python manage.py syncdb
