@@ -1,0 +1,31 @@
+# Distribucion de desarrollo
+build_environment: Ubuntu 14.04
+
+# Selección del lenguaje, en nuestro caso python. 
+language: python   
+
+python:
+  - "2.7" 
+
+install:   # Instalación de dependencias
+  - sudo apt-get update
+  - sudo apt-get install libmysqlclient-dev
+  - sudo apt-get install python-dev
+  - sudo apt-get install python-pip
+  - pip install --upgrade pip
+  - pip install -r requirements.txt 
+
+script:       # El script que ejecutaremos para que nuestro código funcione y corra los test.
+  - make test
+
+branches:     # decidimos que TravisCI solo compruebe los test del master de github.
+  - only:
+    - master
+
+notifications:   # Notificamos los resultados de los test por correo
+  recipients:
+    - rubenmartin1991@gmail.com
+  email:
+    on_success: change
+    on_failure: always
+

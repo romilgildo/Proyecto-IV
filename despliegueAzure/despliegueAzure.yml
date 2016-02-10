@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  sudo: yes
+  remote_user: pluco
+  tasks:
+  - name: Actualizar sistema base
+    apt: update_cache=yes upgrade=dist 
+  - name: Instalar paquetes necesarios
+    action: apt pkg={{ item }} state=installed
+    with_items:
+      - python-setuptools
+      - python-dev
+      - build-essential
+      - git
+      - make
+  - name: Clonar repositorio desde git
+    git: repo=https://github.com/romilgildo/IV-PLUCO-RMH.git dest=IV-PLUCO-RMH clone=yes force=yes
+  - name: Instalar requisitos para la app
+    shell: cd IV-PLUCO-RMH && make install
+  - name: Ejecutar aplicacion
+    command: chdir=IV-PLUCO-RMH nohup python manage.py runserver 0.0.0.0:8000
